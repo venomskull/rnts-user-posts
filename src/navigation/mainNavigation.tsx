@@ -10,18 +10,6 @@ import { auth } from '../constants/firebase';
 const MainNav: FC = () => {
     const [user, setUser] = useState<any>(null);
 
-    // const bootstrap = () => {
-    //     firebase.auth().onAuthStateChanged(_user => {
-    //         if(_user){
-    //             setUser(_user)
-    //         }
-    //     })
-    // }
-
-    // useEffect(() => {
-    //     bootstrap()
-    // }, [])
-
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged(authUser => {
             console.log(authUser);
